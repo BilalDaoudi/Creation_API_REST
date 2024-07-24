@@ -3,7 +3,6 @@ import joueurs from './joueurs.json' assert {type:'json'};
 export const AllJoueurs = (request, response) => {
   response.json(joueurs);
 };
-
 export const JoueurByid = (request, response) => {
   const id = request.params.id;
   const joueur = joueurs.find((p) => p.id === id);
@@ -13,7 +12,6 @@ export const JoueurByid = (request, response) => {
     response.send("n'est pas joueur avec id donnée");
   }
 };
-
 export const SupprimerJoueur = (request, response) => {
   const id = request.params.id;
   let joueur = joueurs.find((j) => j.id === id);
