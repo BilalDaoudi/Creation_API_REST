@@ -3,6 +3,9 @@ import joueurs from './joueurs.json' assert {type:'json'};
 export const AllJoueurs = (request, response) => {
   response.json(joueurs);
 };
+
+
+
 export const JoueurByid = (request, response) => {
   const id = request.params.id;
   const joueur = joueurs.find((p) => p.id === id);
