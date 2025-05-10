@@ -1,5 +1,9 @@
 import joueurs from './joueurs.json' assert {type:'json'};
 
+
+
+
+
 export const AllJoueurs = (request, response) => {
   response.json(joueurs);
 };
